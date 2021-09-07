@@ -1,3 +1,3 @@
 ﻿  main.cpp
-C:\Users\gabeb\source\repos\CPET240\Lab01_StarterCode\CPPDlgBoxStarterCode\main.cpp(66,12): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
-  CPPDlgBoxStarterCode.vcxproj -> C:\Users\gabeb\source\repos\CPET240\Lab01_StarterCode\x64\Debug\CPPDlgBoxStarterCode.exe
+C:\Users\gabeb\source\repos\CPET240_Repo\CPET240\Lab01_StarterCode\CPPDlgBoxStarterCode\main.cpp(66,12): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  CPPDlgBoxStarterCode.vcxproj -> C:\Users\gabeb\source\repos\CPET240_Repo\CPET240\Lab01_StarterCode\x64\Debug\CPPDlgBoxStarterCode.exe
