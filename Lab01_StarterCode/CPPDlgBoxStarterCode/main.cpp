@@ -31,6 +31,7 @@ Credits:
 BOOL CALLBACK DialogFunc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 const int bufSizeFixed = 80;
 CONST DWORD TIMER = 1;
+//CONST DWORD TIMER2 = 1;
 
 LPCSTR SZ_FILE = "C:\\zing\\time.txt";
 
@@ -62,6 +63,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE h0, _In_ PWSTR 
 	}// end while
 
 	KillTimer(hDlg, TIMER);
+	//KillTimer(hDlg, TIMER2);
 
 	return msg.wParam;
 }
@@ -83,8 +85,59 @@ BOOL CALLBACK DialogFunc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 		{
 		case TIMER:
 
-			count++;
+			/*count++;
 			SetDlgItemInt(hDlg, IDC_EDIT_OUTPUT, count, FALSE);
+
+			break;*/
+
+			SetDlgItemTextA(hDlg, IDC_ERROR_OUTPUT, " ");
+
+			DWORD dwBytesRead;
+			CHAR szTime[24];
+			HANDLE hFile;
+
+			hFile = CreateFileA(
+				SZ_FILE,
+				GENERIC_READ,
+				0,						// no sharing 
+				NULL,					// no security
+				OPEN_EXISTING,			// fail if file already exists 
+				FILE_ATTRIBUTE_NORMAL,
+				NULL					// no template
+			);
+
+			if (hFile != INVALID_HANDLE_VALUE)
+			{
+				dwBytesRead = sizeof(szTime);
+
+				if (ReadFile(hFile, szTime, sizeof(szTime), &dwBytesRead, NULL))
+				{
+					//std::cout << "Time: " << szTime << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					SetDlgItemTextA(hDlg, IDC_FILE_OUTPUT, szTime);
+
+					CloseHandle(hFile);
+
+					DeleteFileA(SZ_FILE);
+				}
+			}
+			else
+			{
+				DWORD error = GetLastError();
+
+				switch (error)
+				{
+				case ERROR_FILE_NOT_FOUND:
+					SetDlgItemTextA(hDlg, IDC_ERROR_OUTPUT, "File not found...");
+					break;
+
+				case ERROR_SHARING_VIOLATION:
+					SetDlgItemTextA(hDlg, IDC_ERROR_OUTPUT, "Error created but not closed");
+					break;
+
+				default:
+					SetDlgItemInt(hDlg, IDC_ERROR_OUTPUT, error, FALSE);
+				}
+			}
 
 			break;
 		}
@@ -122,14 +175,14 @@ BOOL CALLBACK DialogFunc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 			break;
 
-		case IDC_BUTTON_READ:
+		/*case IDC_BUTTON_READ:
 
 			DWORD dwBytesRead;
 			CHAR szTime[24];
 			HANDLE hFile;
 
-			hFile = CreateFile(
-				(LPCWSTR)SZ_FILE,
+			hFile = CreateFileA(
+				SZ_FILE,
 				GENERIC_READ,
 				0,						// no sharing 
 				NULL,					// no security
@@ -144,12 +197,14 @@ BOOL CALLBACK DialogFunc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 				if (ReadFile(hFile, szTime, sizeof(szTime), &dwBytesRead, NULL))
 				{
-					std::cout << "Time: " << szTime << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					//std::cout << "Time: " << szTime << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					SetDlgItemTextA(hDlg, IDC_FILE_OUTPUT, szTime);
+
 				}
 
 				CloseHandle(hFile);
 
-				DeleteFile((LPCWSTR)SZ_FILE);
+				DeleteFileA(SZ_FILE);
 			}
 			else
 			{
@@ -157,16 +212,18 @@ BOOL CALLBACK DialogFunc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 
 				if (error == ERROR_FILE_NOT_FOUND)
 				{
-					std::cout << "File not found" << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					//std::cout << "File not found" << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					SetDlgItemTextA(hDlg, IDC_FILE_OUTPUT, "File not found...");
 				}
 				else
 				{
-					std::cout << "Error: " << error << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					//std::cout << "Error: " << error << std::endl; //NEDD TO: OUTPUT RESULT TO OUTPUT TEXT BOX
+					SetDlgItemTextW(hDlg, IDC_FILE_OUTPUT, (LPCWSTR)error);
 				}
 			}
 
 			break;
-
+			*/
 		case IDC_BUTTON_GET_INPUT:
 			// extract the text from the text box
 

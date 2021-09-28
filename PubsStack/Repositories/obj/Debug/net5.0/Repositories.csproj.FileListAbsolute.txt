@@ -1,0 +1,15 @@
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\Repositories.deps.json
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\Repositories.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\ref\Repositories.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\Repositories.pdb
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\Model.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\bin\Debug\net5.0\Model.pdb
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfo.cs
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.csproj.CopyComplete
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\ref\Repositories.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\Repositories\obj\Debug\net5.0\Repositories.pdb
