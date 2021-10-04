@@ -31,5 +31,10 @@ namespace PubsServiceBus
 
 			return authors;
 		}
+
+		public Author FindAuthor(string auid)
+        {
+			return _auRepo.Find(auid);
+        }
 	}
 }

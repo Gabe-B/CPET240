@@ -9,9 +9,5 @@ namespace Model
 		public string au_lname { get; set; }
 
 		//Other Fields
-
-
-
-
 	}
 }

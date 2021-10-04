@@ -40,7 +40,41 @@ namespace Repositories
 
 		public Author Find(string id)
 		{
-			throw new NotImplementedException();
+			string sql = "SELECT * FROM authors WHERE au_id = @id";
+
+			Author author = default(Author);
+
+            try
+            {
+				using (SqlConnection conn = new SqlConnection(_connectionString))
+				{
+					conn.Open();
+
+					using (SqlCommand cmd = new SqlCommand(sql, conn))
+					{
+						cmd.Parameters.AddWithValue("@id", id);
+						//cmd.Parameters.Add(new SqlParameter("@id", id));
+
+						using (SqlDataReader reader = cmd.ExecuteReader())
+						{
+							if (reader.Read())
+							{
+								author = new Author()
+								{
+									au_id = reader["au_id"].ToString(),
+									au_fname = reader["au_fname"].ToString(),
+									au_lname = reader["au_lname"].ToString()
+								};
+							}
+						}
+					}
+				}
+			}
+			catch(SqlException ex)
+            {
+				return default(Author);
+            }
+			return author;
 		}
 
 		public IList<Author> FindAll()
