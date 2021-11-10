@@ -1,0 +1,35 @@
+﻿@page
+@model Razor_UI.Pages.BooksModel
+@{
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Title ID</th>
+			<th>Type</th>
+			<th>Publisher ID</th>
+			<th>Publisher Name</th>
+			<th>Price</th>
+			<th>YTD Sales</th>
+			<th>Publish Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var b in Model.Books)
+			{
+				<tr>
+					<td>@b.Title</td>
+					<td>@b.Title_ID</td>
+					<td>@b.Type</td>
+					<td>@b.Pub.pub_id</td>
+					<td>@b.Pub.pub_name</td>
+					<td>@b.Price</td>
+					<td>@b.YTD_Sales</td>
+					<td>@b.PubDate</td>
+				</tr>
+			}
+	</tbody>
+</table>

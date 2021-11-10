@@ -44,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
@@ -305,7 +309,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\gabeb\\Workspace\\CPET240\\PubsStack\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\gabeb\\Workspace\\CPET240\\PubsStack\\Model\\Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

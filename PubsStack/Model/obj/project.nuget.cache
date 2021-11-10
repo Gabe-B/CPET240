@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A+NIZ4SToHQJVeB4CxDb+VRVwIq7tfmmCCn01CCykCmjqRgFxb4E9Hkcs4njsxP+0IPfv3UulGQb+G93v+d6QQ==",
+  "dgSpecHash": "EsXyBhIhuC0HhKJSegPCdBH/R6gt4m8ysd1ZZ4kgQXBKB+M06iaBHwrVprL1h31CjTfsySkjoVlUSPjaJRVEvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gabeb\\Workspace\\CPET240\\PubsStack\\Model\\Model.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\gabeb\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\gabeb\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\gabeb\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\gabeb\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\gabeb\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\gabeb\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\gabeb\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"

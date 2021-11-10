@@ -1,0 +1,73 @@
+﻿@model Model.Author
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Author</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="au_id" class="control-label"></label>
+                <input asp-for="au_id" class="form-control" />
+                <span asp-validation-for="au_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_fname" class="control-label"></label>
+                <input asp-for="au_fname" class="form-control" />
+                <span asp-validation-for="au_fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_lname" class="control-label"></label>
+                <input asp-for="au_lname" class="form-control" />
+                <span asp-validation-for="au_lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_phone" class="control-label"></label>
+                <input asp-for="au_phone" class="form-control" />
+                <span asp-validation-for="au_phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_address" class="control-label"></label>
+                <input asp-for="au_address" class="form-control" />
+                <span asp-validation-for="au_address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_city" class="control-label"></label>
+                <input asp-for="au_city" class="form-control" />
+                <span asp-validation-for="au_city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_state" class="control-label"></label>
+                <input asp-for="au_state" class="form-control" />
+                <span asp-validation-for="au_state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_zip" class="control-label"></label>
+                <input asp-for="au_zip" class="form-control" />
+                <span asp-validation-for="au_zip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="au_contract" class="control-label"></label>
+                <input asp-for="au_contract" class="form-control" />
+                <span asp-validation-for="au_contract" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
