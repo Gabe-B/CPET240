@@ -51,7 +51,6 @@ namespace Model
 		public string title { get; set; }
 		public string type { get; set; }
 		public Publisher publisher { get; set; }
-		//public string pub_id { get; set; }
 		public decimal? price { get; set; }
 		public int? ytd_sales { get; set; }
 		public DateTime pubdate { get; set; }

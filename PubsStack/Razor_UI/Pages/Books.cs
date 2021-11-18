@@ -14,6 +14,9 @@ namespace Razor_UI.Pages
 		[BindProperty]
 		public Model.Author Author { get; set; }
 
+		[BindProperty]
+		public Model.Book Book { get; set; }
+
 		public IEnumerable<ViewModels.BookViewModel> Books { get; set; }
 
 		public BooksModel(PubsServiceBus.ServiceBus service)
@@ -25,6 +28,20 @@ namespace Razor_UI.Pages
 		{
 			Author = _service.FindAuthor(auid);
 			Books = _service.findAllBooksByAuthor(Author);
+		}
+
+		public IActionResult Delete(string bid)
+		{
+			Book = _service._bRepo.Find(bid);
+
+			if (ModelState.IsValid)
+			{
+				_service._bRepo.Delete(Book);
+
+				return RedirectToPage("Books");
+			}
+
+			return Page();
 		}
     }
 }

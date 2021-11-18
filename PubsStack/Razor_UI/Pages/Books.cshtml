@@ -3,6 +3,10 @@
 @{
 }
 
+<div class="text-center">
+	<h1 class="display-4">Books</h1>
+</div>
+
 <table class="table">
 	<thead>
 		<tr>
@@ -18,18 +22,21 @@
 	</thead>
 
 	<tbody>
-		@foreach(var b in Model.Books)
-			{
-				<tr>
-					<td>@b.Title</td>
-					<td>@b.Title_ID</td>
-					<td>@b.Type</td>
-					<td>@b.Pub.pub_id</td>
-					<td>@b.Pub.pub_name</td>
-					<td>@b.Price</td>
-					<td>@b.YTD_Sales</td>
-					<td>@b.PubDate</td>
-				</tr>
-			}
+		@foreach (var b in Model.Books)
+		{
+			<tr>
+				<td>@b.Title</td>
+				<td>@b.Title_ID</td>
+				<td>@b.Type</td>
+				<td>@b.Pub.pub_id</td>
+				<td>@b.Pub.pub_name</td>
+				<td>@b.Price</td>
+				<td>@b.YTD_Sales</td>
+				<td>@b.PubDate</td>
+				<td>
+					<a class="btn btn-primary" onclick="Delete(@b.Title_ID)" asp-page="Books">Remove Book</a>
+				</td>
+			</tr>
+		}
 	</tbody>
 </table>
