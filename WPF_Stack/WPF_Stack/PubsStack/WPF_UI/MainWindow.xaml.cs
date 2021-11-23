@@ -142,5 +142,36 @@ namespace WPF_UI
                 }
             }
         }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+		{
+            if (AuthorsGrid.SelectedItems.Count <= 0)
+            {
+                MessageBox.Show("Select an author");
+                return;
+            }
+
+            AuthorViewModel x = AuthorsGrid.SelectedItem as AuthorViewModel;
+
+            Author a = _service.FindAuthor(x.ID);
+
+            MessageBoxResult results = MessageBox.Show("Are you sure you want to delete this author?", "DELETE", MessageBoxButton.YesNo);
+
+            if(results == MessageBoxResult.Yes)
+			{
+                _service._auRepo.Delete(a);
+			}
+            else
+			{
+                return;
+			}
+        }
+
+        private void Books_Click(object sender, RoutedEventArgs e)
+        {
+            Books b = new Books();
+
+            b.ShowDialog();
+		}
     }
 }

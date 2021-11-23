@@ -10,8 +10,14 @@
     <Compile Update="AuthorWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Books.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Books.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

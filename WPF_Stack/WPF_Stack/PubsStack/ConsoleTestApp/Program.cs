@@ -62,7 +62,7 @@ namespace ConsoleTestApp
                 title_id = "BU1333",
                 type = "business",
                 //price = 80.40m, // deciMal
-                pub_id = "1389",
+                //pub_id = "1389",
                 pubdate = DateTime.Now
 
 
@@ -83,22 +83,22 @@ namespace ConsoleTestApp
 
             AuthorRepoDB AuthorRepo = new AuthorRepoDB(connectionString);
 
-            PubsService service = new PubsService(AuthorRepo);
+            //PubsService service = new PubsService(AuthorRepo);
 
-            List<AuthorViewModel> authors = service.FindAllAuthors();  
+            //List<AuthorViewModel> authors = service.FindAllAuthors();  
 
-            foreach(AuthorViewModel au in authors)
+            /*foreach(AuthorViewModel au in authors)
             {
                 Console.WriteLine(String.Format(
                     "{0}: {1} {2}", 
                     au.ID, au.FirstName, au.LastName)); 
-            }
+            }*/
 
             Console.WriteLine(""); // newline 
 
-            Author author = service.FindAuthor("172-32-1176");
+            //Author author = service.FindAuthor("172-32-1176");
 
-            Console.WriteLine(author.au_fname); 
+            //Console.WriteLine(author.au_fname); 
         }
     }
 }

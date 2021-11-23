@@ -29,8 +29,9 @@ namespace PubsWinForms
 
             AuthorRepoDB au_repo
                 = new AuthorRepoDB(con);
+            BookRepoDB b_repo = new BookRepoDB(con);
 
-            _service = new PubsService(au_repo);
+            _service = new PubsService(au_repo, b_repo);
 
             lvAuthors.View = View.Details;
             lvAuthors.FullRowSelect = true;

@@ -4,7 +4,7 @@
 }
 
 <div class="text-center">
-	<h1 class="display-4">Books</h1>
+	<h1 class="display-4">Books by @Model.Author.au_fname @Model.Author.au_lname</h1>
 </div>
 
 <table class="table">
@@ -37,6 +37,44 @@
 					<a class="btn btn-primary" onclick="Delete(@b.Title_ID)" asp-page="Books">Remove Book</a>
 				</td>
 			</tr>
+		}
+	</tbody>
+</table>
+
+<div class="text-center">
+	<h1 class="display-4">All Books</h1>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Title ID</th>
+			<th>Type</th>
+			<th>Publisher ID</th>
+			<th>Publisher Name</th>
+			<th>Price</th>
+			<th>YTD Sales</th>
+			<th>Publish Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var ab in Model.AllBooks)
+		{
+		<tr>
+			<td>@ab.title</td>
+			<td>@ab.title_id</td>
+			<td>@ab.type</td>
+			<td>@ab.publisher.pub_id</td>
+			<td>@ab.publisher.pub_name</td>
+			<td>@ab.price</td>
+			<td>@ab.ytd_sales</td>
+			<td>@ab.pubdate</td>
+			<td>
+				<a class="btn btn-primary" onclick="AddToAuthor(@ab.title_id,@Model.Author)" asp-page="Books" asp-route-auid="@Model.Author.au_id">Add Book to @Model.Author.au_fname @Model.Author.au_lname</a>
+			</td>
+		</tr>
 		}
 	</tbody>
 </table>

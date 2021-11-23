@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_UI"
         mc:Ignorable="d"
-        Title="Author Info" Height="450" Width="650">
+        Title="Author Info" Height="450" Width="870">
     <Grid>
          <!-- 
         https://www.c-sharpcorner.com/article/learn-about-stackpanel-in-wpf/
@@ -114,6 +114,31 @@
                 <Button x:Name="btnOk" VerticalAlignment="Bottom" Margin="5"  Width="75" Height="23" Click="btnOk_Click" >Ok</Button>
                 <Button x:Name="btnCancel" VerticalAlignment="Bottom" Margin="5" Width="75" Height="23" Click="btnCancel_Click">Cancel</Button>
             </StackPanel>
-        </StackPanel>
+
+
+			<StackPanel x:Name="StackPanelBooks"    
+              Orientation="Horizontal">
+				<DataGrid x:Name="AUBooksGrid" 
+                                    AutoGenerateColumns="False" HeadersVisibility="Column"
+                                    RenderTransformOrigin="0.502,0.683" DockPanel.Dock="Left">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Title ID #" Binding="{Binding title_id, Mode=OneWay}" />
+						<DataGridTextColumn Header="Title" Binding="{Binding title, Mode=OneWay}" />
+						<DataGridTextColumn Header="Type" Binding="{Binding type, Mode=OneWay}" />
+						<DataGridTextColumn Header="Publisher ID" Binding="{Binding publisher.pub_id, Mode=OneWay}" />
+						<DataGridTextColumn Header="Publisher Name" Binding="{Binding publisher.pub_name, Mode=OneWay}" />
+						<DataGridTextColumn Header="Price" Binding="{Binding price, Mode=OneWay}" />
+						<DataGridTextColumn Header="YTD Sales" Binding="{Binding ytd_sales, Mode=OneWay}" />
+						<DataGridTextColumn Header="Publish Date" Binding="{Binding pubdate, Mode=OneWay}" />
+					</DataGrid.Columns>
+
+				</DataGrid>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+				<Button x:Name="btnRemove" Height="25" Width="auto" Margin="5" Click="btnRemove_Click">Remove Book From Author</Button>
+			</StackPanel>
+
+		</StackPanel>
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_UI"
         mc:Ignorable="d"
-        Title="Authors" Height="450" Width="350">
+        Title="Authors" Height="450" Width="600">
 
     <Grid Margin="0,0,0,0">
  
@@ -14,7 +14,8 @@
                 <MenuItem Header="_File">
                     <!--<MenuItem Name="NewAuthor" Header="_New" Click="NewAuthor_Click" />-->
 					<MenuItem Name="EditButton" Header="_Edit" Click="Edit_Click" />
-					<MenuItem Header="_Open" />
+					<MenuItem Name="DeleteButton" Header="_Delete" Click="Delete_Click" />
+					<MenuItem Name="BooksButton" Header="_Books" Click="Books_Click" />
                     <MenuItem Header="_Save" />
                     <Separator />
                     <MenuItem Header="_Exit" />
@@ -22,15 +23,22 @@
             </Menu>
 
             <StatusBar DockPanel.Dock="Bottom" >
-                <TextBox Name="txtID" Width="100">hello</TextBox>
-            </StatusBar>
+				<Label Name ="lblID">Author ID:</Label>
+				<TextBox Name="txtID" Width="100" />
+			</StatusBar>
             <DataGrid x:Name="AuthorsGrid" 
                         SelectionChanged="AuthorsGrid_SelectionChanged"
                         AutoGenerateColumns="False" HeadersVisibility="Column"
                         RenderTransformOrigin="0.502,0.683" DockPanel.Dock="Left">
 
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+					<DataGridTextColumn Header="Name" Binding="{Binding Name, Mode=OneWay}" />
+					<DataGridTextColumn Header="Phone #" Binding="{Binding Phone, Mode=OneWay}" />
+					<DataGridTextColumn Header="Address" Binding="{Binding Address, Mode=OneWay}" />
+					<DataGridTextColumn Header="City" Binding="{Binding City, Mode=OneWay}" />
+					<DataGridTextColumn Header="State" Binding="{Binding State, Mode=OneWay}" />
+					<DataGridTextColumn Header="ZIP" Binding="{Binding Zip, Mode=OneWay}" />
+					<DataGridTextColumn Header="Contract" Binding="{Binding Contract, Mode=OneWay}" />
 				</DataGrid.Columns>
 
 			</DataGrid>
