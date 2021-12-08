@@ -12,7 +12,7 @@ namespace Razor_UI.Pages
 {
     public class BooksModel : PageModel
     {
-		private PubsServiceBus.ServiceBus _service;
+		public PubsServiceBus.ServiceBus _service;
 
 		[BindProperty]
 		public Model.Author Author { get; set; }
@@ -37,13 +37,15 @@ namespace Razor_UI.Pages
 			AllBooks = _service._bRepo.FindAll();
 		}
 
-		public IActionResult Delete(string bid)
+		public IActionResult Delete(string bid, Author au)
 		{
+			BookRepoDB bdb = new BookRepoDB(GetConnection());
+
 			Book = _service._bRepo.Find(bid);
 
 			if (ModelState.IsValid)
 			{
-				_service._bRepo.Delete(Book);
+				bdb.Delete(Book, au);
 
 				return RedirectToPage("Books");
 			}

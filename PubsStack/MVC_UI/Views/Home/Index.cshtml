@@ -1,89 +1,96 @@
 ﻿@model IEnumerable<ViewModels.AuthorViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="text-right">
+	@Html.ActionLink("Create Author", "Create")
+</div>
+
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Zip)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contract)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Zip)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contract)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
+	<thead>
+		<tr align="center">
+			<th>
+				@Html.DisplayNameFor(model => model.ID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.FirstName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.LastName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Phone)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Address)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.City)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.State)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Zip)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Contract)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr width="100%">
+				<td align="center" width="75%">
+					@Html.DisplayFor(modelItem => item.ID)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.FirstName)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.LastName)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.Phone)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.Address)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.City)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.State)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.Zip)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.Contract)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td class="btn-group">
+					@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+					@Html.ActionLink("Books", "Books", new { auid = item.ID }) |
+					@Html.ActionLink("Delete", "DeleteAuthor", "Home", new { auid = item.ID, confirm = true }, 
+				    new { onclick = "return confirm('Are you sure you want to delete this author?')" })
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>

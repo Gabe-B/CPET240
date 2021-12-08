@@ -15,15 +15,29 @@ using Repositories;
 
 namespace MVC_UI
 {
+	/// <summary>
+	/// startup class
+	/// </summary>
 	public class Startup
 	{
+		/// <summary>
+		/// constructor
+		/// </summary>
+		/// <param name="configuration"></param>
 		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
 		}
 
+		/// <summary>
+		/// configuration
+		/// </summary>
 		public IConfiguration Configuration { get; }
 
+		/// <summary>
+		/// add service to container
+		/// </summary>
+		/// <param name="services"></param>
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
@@ -39,14 +53,23 @@ namespace MVC_UI
 			PubsServiceBus.ServiceBus service = new PubsServiceBus.ServiceBus(auRepo, bRepo);
 
 			services.AddSingleton(service);
+
+			services.AddSwaggerGen();
 		}
 
+		/// <summary>
+		/// configures http request pipeline
+		/// </summary>
+		/// <param name="app"></param>
+		/// <param name="env"></param>
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
+				app.UseSwagger();
+				app.UseSwaggerUI();
 			}
 			else
 			{

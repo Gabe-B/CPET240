@@ -149,14 +149,12 @@ namespace Repositories
 		{
 			List<Book> books = new List<Book>();
 
-			string sql = "SELECT * FROM titles";
-
-			sql = "SELECT T.title_id, title, [type], T.pub_id, pub_name, ytd_sales, price, pubdate FROM titles T " +
-				"JOIN publishers P " +
-				"ON P.pub_id = T.pub_id " +
-				"JOIN titleauthor TA " +
-				"ON TA.title_id = T.title_id " +
-				"WHERE TA.au_id = @au_id";
+			string sql = "SELECT T.title_id, title, [type], T.pub_id, pub_name, ytd_sales, price, pubdate FROM titles T " +
+						 "JOIN publishers P " +
+						 "ON P.pub_id = T.pub_id " +
+						 "JOIN titleauthor TA " +
+						 "ON TA.title_id = T.title_id " +
+						 "WHERE TA.au_id = @au_id";
 
 			try
 			{
@@ -240,7 +238,10 @@ namespace Repositories
 
 		Book IRepository<Book>.Find(string id)
 		{
-			string sql = "SELECT * FROM titles WHERE title_id = @id";
+			string sql = "SELECT T.title_id, title, [type], T.pub_id, pub_name, ytd_sales, price, pubdate FROM titles T " +
+				"JOIN publishers P " +
+				"ON P.pub_id = T.pub_id " +
+				"WHERE T.title_id = @id";
 
 			Book book = default(Book);
 

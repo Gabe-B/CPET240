@@ -129,3 +129,11 @@ C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\PubsServiceBu
 C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\Repositories.pdb
 C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\ViewModels.pdb
 C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\obj\Debug\net5.0\Razor\Views\Home\Books.cshtml.g.cs
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\MVC_UI.xml
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\MVC_UI\obj\Debug\net5.0\MVC_UI.MvcApplicationPartsAssemblyInfo.cs

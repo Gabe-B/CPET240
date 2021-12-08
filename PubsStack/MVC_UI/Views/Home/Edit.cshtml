@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="au_id" class="control-label"></label>
-                <input asp-for="au_id" class="form-control" />
+                <input readonly asp-for="au_id" class="form-control"/>
                 <span asp-validation-for="au_id" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -65,7 +65,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

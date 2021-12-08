@@ -1,6 +1,7 @@
 ﻿@page
 @model Razor_UI.Pages.BooksModel
 @{
+	ViewData["Title"] = "Books Page";
 }
 
 <div class="text-center">
@@ -34,7 +35,9 @@
 				<td>@b.YTD_Sales</td>
 				<td>@b.PubDate</td>
 				<td>
-					<a class="btn btn-primary" onclick="Delete(@b.Title_ID)" asp-page="Books">Remove Book</a>
+					<form method="post">
+						<input type="submit" asp-page-handler="Delete" value="Remove Book" class="btn btn-primary"/>
+					</form>
 				</td>
 			</tr>
 		}
@@ -72,7 +75,9 @@
 			<td>@ab.ytd_sales</td>
 			<td>@ab.pubdate</td>
 			<td>
-				<a class="btn btn-primary" onclick="AddToAuthor(@ab.title_id,@Model.Author)" asp-page="Books" asp-route-auid="@Model.Author.au_id">Add Book to @Model.Author.au_fname @Model.Author.au_lname</a>
+				<div class="btn-group">
+					<!--<a class="btn btn-primary" value="Model.AddToAuthor(ab.title_id, Model.Author)" onclick="AddToAuthor()" asp-page="Books" asp-route-auid="@Model.Author.au_id">Add Book to @Model.Author.au_fname @Model.Author.au_lname</a>-->
+				</div>
 			</td>
 		</tr>
 		}

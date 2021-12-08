@@ -1,0 +1,156 @@
+﻿@model MVC_UI.Models.BookAndAuthorModel
+@{
+	ViewData["Title"] = "Books";
+
+	List<Model.Book> allBooks = (List<Model.Book>)Model._service._bRepo.FindAll();
+
+	Model.Author _author = Model._service.FindAuthor(Model.au_id);
+}
+
+<div>
+	<h1>Books By @_author.au_fname @_author.au_lname</h1>
+</div>
+
+<table class="table">
+	<thead>
+		<tr align="center">
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Title)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Title_ID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Type)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Price)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Pub.pub_id)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Pub.pub_name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].YTD_Sales)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].PubDate)
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (ViewModels.BookViewModel vm in Model.books)
+		{
+			<tr width="100%">
+				<td align="center">
+					@Html.DisplayFor(model => vm.Title_ID)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.Title)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.Type)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.Price)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.Pub.pub_id)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.Pub.pub_name)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.YTD_Sales)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(model => vm.PubDate)
+				</td>
+				<td align="center"> 
+					@Html.ActionLink("Delete", "DeleteBookFromAuthor", new { bid = vm.Title_ID, au = _author.au_id })
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<div>
+	<a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>
+
+<div>
+	<h1>All Books</h1>
+</div>
+
+<table class="table">
+	<thead>
+		<tr align="center">
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Title)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Title_ID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Type)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Price)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Pub.pub_id)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].Pub.pub_name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].YTD_Sales)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.books[0].PubDate)
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (Model.Book b in allBooks)
+		{
+			<tr width="100%">
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.title_id)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.title)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.type)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.price)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.publisher.pub_id)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.publisher.pub_name)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.ytd_sales)
+				</td>
+				<td align="center">
+					@Html.DisplayFor(allBooks => b.pubdate)
+				</td>
+				<td align="center">
+					@Html.ActionLink("Add", "AddBookToAuthor", new { bid = b.title_id, auid = _author.au_id })
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<div>
+	<a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>

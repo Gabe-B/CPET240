@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVC_UI</name>
+    </assembly>
+    <members>
+        <member name="T:MVC_UI.Controllers.HomeController">
+            <summary>
+            Class for controller
+            </summary>
+        </member>
+        <member name="F:MVC_UI.Controllers.HomeController.books">
+            <summary>
+            List of book view models
+            </summary>
+        </member>
+        <member name="P:MVC_UI.Controllers.HomeController.Book">
+            <summary>
+            Specific book
+            </summary>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{MVC_UI.Controllers.HomeController},PubsServiceBus.ServiceBus)">
+            <summary>
+            Constructor for class
+            </summary>
+            <param name="logger"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Index">
+            <summary>
+            Index Page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Create">
+            <summary>
+            HttpGet for create author page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Create(Model.Author)">
+            <summary>
+            HttpPost for create author page
+            </summary>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Edit(System.String)">
+            <summary>
+            HttpGet for edit author page
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Edit(Model.Author)">
+            <summary>
+            HttpPost for edit author page
+            </summary>
+            <param name="au"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.DeleteAuthor(System.String,System.Boolean)">
+            <summary>
+            Deletes author from repo
+            </summary>
+            <param name="auid"></param>
+            <param name="confirm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Books(System.String)">
+            <summary>
+            HttpGet for books page
+            </summary>
+            <param name="auid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.DeleteBookFromAuthor(System.String,System.String)">
+            <summary>
+            Deletes book from author in repo
+            </summary>
+            <param name="bid"></param>
+            <param name="au"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.AddBookToAuthor(System.String,System.String)">
+            <summary>
+            Adds book to author in repo
+            </summary>
+            <param name="bid"></param>
+            <param name="auid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Privacy">
+            <summary>
+            privacy
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MVC_UI.Controllers.HomeController.Error">
+            <summary>
+            Error handler
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MVC_UI.Models.BookAndAuthorModel">
+            <summary>
+            view model class
+            </summary>
+        </member>
+        <member name="F:MVC_UI.Models.BookAndAuthorModel._service">
+            <summary>
+            repo services
+            </summary>
+        </member>
+        <member name="M:MVC_UI.Models.BookAndAuthorModel.#ctor(PubsServiceBus.ServiceBus)">
+            <summary>
+            constructor
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="P:MVC_UI.Models.BookAndAuthorModel.books">
+            <summary>
+            lits of book view models
+            </summary>
+        </member>
+        <member name="P:MVC_UI.Models.BookAndAuthorModel.au_id">
+            <summary>
+            author id
+            </summary>
+        </member>
+        <member name="T:MVC_UI.Models.ErrorViewModel">
+            <summary>
+            error view model class
+            </summary>
+        </member>
+        <member name="P:MVC_UI.Models.ErrorViewModel.RequestId">
+            <summary>
+            get and set for id
+            </summary>
+        </member>
+        <member name="P:MVC_UI.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            returns id
+            </summary>
+        </member>
+        <member name="T:MVC_UI.Program">
+            <summary>
+            Program class
+            </summary>
+        </member>
+        <member name="M:MVC_UI.Program.Main(System.String[])">
+            <summary>
+            program main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:MVC_UI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            creates host builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MVC_UI.Startup">
+            <summary>
+            startup class
+            </summary>
+        </member>
+        <member name="M:MVC_UI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:MVC_UI.Startup.Configuration">
+            <summary>
+            configuration
+            </summary>
+        </member>
+        <member name="M:MVC_UI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            add service to container
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:MVC_UI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            configures http request pipeline
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
