@@ -12,6 +12,7 @@ using Model;
 using ViewModels;
 using PubsServiceBus;
 using Repositories;
+using MySql.Data.MySqlClient;
 
 namespace MVC_UI
 {

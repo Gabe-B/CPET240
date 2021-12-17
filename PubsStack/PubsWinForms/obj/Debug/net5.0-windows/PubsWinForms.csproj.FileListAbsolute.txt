@@ -40,3 +40,14 @@ C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows
 C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\Repositories.pdb
 C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\ViewModels.pdb
 C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\obj\Debug\net5.0-windows\PubsWinForms.frmMain.resources
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\Google.Protobuf.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\K4os.Compression.LZ4.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\K4os.Hash.xxHash.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\MySql.Data.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\Ubiety.Dns.Core.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\ZstdNet.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\System.Text.Encodings.Web.dll
+C:\Users\gabeb\Workspace\CPET240\PubsStack\PubsWinForms\bin\Debug\net5.0-windows\System.Text.Json.dll

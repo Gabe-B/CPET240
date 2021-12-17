@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtR0O6dsexUShund6wdNYkwAAAAACAAAAAAAQZgAAAAEAACAAAAD5Pn+Qt6Xx5PO2t+nmVDyiPoa8iqEmJUeGUZn+btMWdwAAAAAOgAAAAAIAACAAAABGHU61ReNXE5wKsZlWefX50EmT/sCxnxSiCtZXzjnlbIAAAAAgKQvuHw6B3aR5ZepkT5fK977zCO9oQYWU6SopHrt+S5IiKeDX1tQkx/HtQ+lRpY8jUdJex6VjBpExutzVA37bfOnfez8iSYTlr3MeVXVsfTzSBcvbVUskI+5y5XuA7pgkhYl0zCPhBTCj1ymCvQnYCK/KdlbceCYWXZDxQ7huQUAAAAALozxrXdVHkGWrTBgWZDW6EtPbAneofv5+y/LeRw3rt9S/c8921Uav4IBWEEt9U7+sOJhRd5lygLLakG3u1jwB</EncryptedPassword>
+    <History>False|2021-12-09T16:59:24.0013426Z;False|2021-12-09T11:59:10.2282911-05:00;False|2021-12-09T11:59:01.4126805-05:00;False|2021-12-09T11:58:44.5109596-05:00;False|2021-12-09T11:43:22.7237978-05:00;False|2021-12-09T11:42:15.1246868-05:00;False|2021-12-09T11:26:34.0013975-05:00;False|2021-12-09T11:26:06.5432000-05:00;False|2021-12-09T11:24:53.0537355-05:00;True|2021-12-09T11:22:40.9766394-05:00;False|2021-12-09T11:19:16.1137652-05:00;True|2021-12-09T11:07:26.5811219-05:00;True|2021-12-09T11:04:07.5035292-05:00;True|2021-12-09T10:48:56.3076392-05:00;True|2021-12-09T10:47:58.7068886-05:00;False|2021-12-09T10:46:17.0347326-05:00;False|2021-12-09T10:45:41.8206788-05:00;False|2021-12-09T10:44:41.0974729-05:00;False|2021-12-09T10:44:29.3278863-05:00;False|2021-12-09T10:41:53.3861989-05:00;False|2021-12-09T10:39:38.0684603-05:00;False|2021-12-09T10:39:29.2840556-05:00;False|2021-12-09T10:37:49.0758212-05:00;False|2021-12-09T10:35:54.3852894-05:00;False|2021-12-09T10:35:46.9459999-05:00;False|2021-12-09T10:32:24.6318693-05:00;</History>
+  </PropertyGroup>
+</Project>

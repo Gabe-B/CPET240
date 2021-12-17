@@ -151,9 +151,9 @@ namespace WPF_UI
                 return;
             }
 
-            AuthorViewModel x = AuthorsGrid.SelectedItem as AuthorViewModel;
+            //AuthorViewModel x = AuthorsGrid.SelectedItem as AuthorViewModel;
 
-            Author a = _service.FindAuthor(x.ID);
+            Author a = _service.FindAuthor(txtID.Text.ToString());
 
             MessageBoxResult results = MessageBox.Show("Are you sure you want to delete this author?", "DELETE", MessageBoxButton.YesNo);
 
