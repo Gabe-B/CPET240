@@ -2,7 +2,7 @@
 using Model;
 using ViewModel;
 using Repositories;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 namespace PubsServiceBus
 {
@@ -56,5 +56,42 @@ namespace PubsServiceBus
         {
             return _auRepo.Find(auid);
         }
+
+        public bool DeleteAuthor(Author a)
+		{
+            return _auRepo.Delete(a);
+		}
+
+        public void UpdateAuthor(Author a)
+		{
+            _auRepo.Update(a);
+		}
+
+        public List<Book> FindBooksForAuthor(Author a)
+		{
+            return (List<Book>)_bRepo.FindFor(a);
+		}
+
+        public void DeleteBookFromAuthor(Book b, Author a)
+		{
+            _bRepo.DeleteFor(b, a);
+		}
+
+        public void AddBookToAuthor(Book b, string id)
+        {
+            BookRepoDB bRepo = (BookRepoDB)_bRepo;
+
+            bRepo.AddForAuthor(b, id);
+        }
+
+        public List<Book> FindAllBooks()
+		{
+            return (List<Book>)_bRepo.FindAll();
+		}
+
+        public bool CreateNewAuthor(Author a)
+		{
+            return _auRepo.Add(a);
+		}
     }
 }

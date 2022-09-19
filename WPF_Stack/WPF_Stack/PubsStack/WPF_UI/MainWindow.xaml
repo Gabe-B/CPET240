@@ -11,15 +11,12 @@
  
         <DockPanel LastChildFill="True"   Width="auto"  >
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File">
-                    <!--<MenuItem Name="NewAuthor" Header="_New" Click="NewAuthor_Click" />-->
+				<MenuItem Header="_File">
 					<MenuItem Name="EditButton" Header="_Edit" Click="Edit_Click" />
 					<MenuItem Name="DeleteButton" Header="_Delete" Click="Delete_Click" />
 					<MenuItem Name="BooksButton" Header="_Books" Click="Books_Click" />
-                    <MenuItem Header="_Save" />
-                    <Separator />
-                    <MenuItem Header="_Exit" />
-                </MenuItem>
+					<MenuItem Name="CreateButton" Header="_Create" Click="CreateButton_Click" />
+				</MenuItem>
             </Menu>
 
             <StatusBar DockPanel.Dock="Bottom" >

@@ -58,7 +58,7 @@ namespace Repositories
             }
         }
 
-        public bool AddFor(Book b, string aid)
+        public bool AddForAuthor(Book b, string aid)
         {
             // add to title author table 
                 string sql = "INSERT INTO titleauthor (au_id, title_id) VALUES (@auid, @tid)";

@@ -27,17 +27,13 @@ namespace WPF_UI
 		PubsService _service = null;
 		List<Book> books;
 
-		public Books()
+		public Books(PubsService service)
 		{
 			InitializeComponent();
 
-			string database = GetConnection();
-			AuthorRepoDB auRepo = new AuthorRepoDB(database);
-			BookRepoDB bRepo = new BookRepoDB(database);
+			_service = service;
 
-			_service = new PubsService(auRepo, bRepo);
-
-			books = (List<Book>)_service._bRepo.FindAll();
+			books = (List<Book>)_service.FindAllBooks();
 
 			BooksGrid.ItemsSource = books;
 		}

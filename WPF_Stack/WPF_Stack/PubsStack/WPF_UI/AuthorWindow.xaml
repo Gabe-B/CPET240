@@ -5,140 +5,166 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_UI"
         mc:Ignorable="d"
-        Title="Author Info" Height="450" Width="870">
+        Title="Author Info" Height="725" Width="980">
     <Grid>
          <!-- 
         https://www.c-sharpcorner.com/article/learn-about-stackpanel-in-wpf/
-        --> 
-        
-        <StackPanel x:Name="StackPanelOuter"    
-              Orientation="Vertical">
-			<StackPanel x:Name="StackPanelInnerInfo1"    
-              Orientation="Horizontal">
-				<Label x:Name="LabelUserName"        
-               Content="First Name" HorizontalAlignment="Left"    
-               Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxUserName"      
-                 Text="{Binding au_fname}"    
-                 Height="20"        
-                 Width="150"       
-                 Margin="0 10 0 0"/>
+        -->
+		<ScrollViewer Height="auto">
+            <StackPanel x:Name="StackPanelOuter"    
+                  Orientation="Vertical">
+			    <StackPanel x:Name="StackPanelInnerInfo1"    
+                  Orientation="Horizontal">
+				    <Label x:Name="LabelUserName"        
+                   Content="First Name" HorizontalAlignment="Left"    
+                   Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxUserName"      
+                     Text="{Binding au_fname}"    
+                     Height="20"        
+                     Width="150"       
+                     Margin="0 10 0 0"/>
 				
 				
-				<Label x:Name="LabelLastName"        
-                Content="Last Name" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxLastName"      
-                 Text="{Binding au_lname}"    
-                 Height="20"        
-                 Width="150"       
-                 Margin="0 10 0 0"/>
+				    <Label x:Name="LabelLastName"        
+                    Content="Last Name" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxLastName"      
+                     Text="{Binding au_lname}"    
+                     Height="20"        
+                     Width="150"       
+                     Margin="0 10 0 0"/>
 
-				<Label x:Name="LabelPhoneNum"        
-                Content="Phone Number" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxPhoneNum"      
-                 Text="{Binding au_phone}"    
-                 Height="20"        
-                 Width="110"       
-                 Margin="0 10 0 0"/>
-			</StackPanel>
+				    <Label x:Name="LabelPhoneNum"        
+                    Content="Phone Number" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxPhoneNum"      
+                     Text="{Binding au_phone}"    
+                     Height="20"        
+                     Width="110"       
+                     Margin="0 10 0 0"/>
+			    </StackPanel>
 
 
-			<StackPanel x:Name="StackPanelInnerInfo2"    
-              Orientation="Horizontal">
-				<Label x:Name="LabelAddress"        
-                Content="Address" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxAddress"      
-                 Text="{Binding au_address}"    
-                 Height="20"        
-                 Width="140"       
-                 Margin="0 10 0 0"/>
+			    <StackPanel x:Name="StackPanelInnerInfo2"    
+                  Orientation="Horizontal">
+				    <Label x:Name="LabelAddress"        
+                    Content="Address" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxAddress"      
+                     Text="{Binding au_address}"    
+                     Height="20"        
+                     Width="140"       
+                     Margin="0 10 0 0"/>
 
-				<Label x:Name="LabelCity"        
-                Content="City" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxCity"      
-                 Text="{Binding au_city}"    
-                 Height="20"        
-                 Width="140"       
-                 Margin="0 10 0 0"/>
+				    <Label x:Name="LabelCity"        
+                    Content="City" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxCity"      
+                     Text="{Binding au_city}"    
+                     Height="20"        
+                     Width="140"       
+                     Margin="0 10 0 0"/>
 
-				<Label x:Name="LabelState"        
-                Content="State" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxState"      
-                 Text="{Binding au_state}"    
-                 Height="20"        
-                 Width="40"       
-                 Margin="0 10 0 0"/>
+				    <Label x:Name="LabelState"        
+                    Content="State" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+					<ComboBox Width="60" Name="StateComboBox" Height="20" Margin="0 10 0 0" SelectionChanged="StateComboBox_SelectionChanged">
+					</ComboBox>
+				    <!--<TextBox x:Name="TextBoxState"      
+                     Text="{Binding au_state}"    
+                     Height="20"        
+                     Width="40"       
+                     Margin="0 10 0 0"/>-->
 
-				<Label x:Name="LabelZIP"        
-                Content="ZIP" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxZIP"      
-                 Text="{Binding au_zip}"    
-                 Height="20"        
-                 Width="60"       
-                 Margin="0 10 0 0"/>
+				    <Label x:Name="LabelZIP"        
+                    Content="ZIP" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxZIP"      
+                     Text="{Binding au_zip}"    
+                     Height="20"        
+                     Width="60"       
+                     Margin="0 10 0 0"/>
 
-				<Label x:Name="LabelContract"        
-                Content="Contract" HorizontalAlignment="Left"    
-                Margin="0 10 0 0"/>
-				<TextBox x:Name="TextBoxContract"      
-                 Text="{Binding au_contract}"    
-                 Height="20"        
-                 Width="35"       
-                 Margin="0 10 0 0"/>
-			</StackPanel>
+				    <Label x:Name="LabelContract"        
+                    Content="Contract" HorizontalAlignment="Left"    
+                    Margin="0 10 0 0"/>
+				    <TextBox x:Name="TextBoxContract"      
+                     Text="{Binding au_contract}"    
+                     Height="20"        
+                     Width="35"       
+                     Margin="0 10 0 0"/>
+			    </StackPanel>
 			
 			
-			<StackPanel x:Name="StackPanelInnerPassword"    
-              Orientation="Horizontal">
+			    <StackPanel x:Name="StackPanelInnerPassword"    
+                  Orientation="Horizontal">
 
-            </StackPanel>
+                </StackPanel>
 
-            <StackPanel x:Name="StackPanelInnerConfirmPassword"    
-              Orientation="Horizontal">
+                <StackPanel x:Name="StackPanelInnerConfirmPassword"    
+                  Orientation="Horizontal">
 
-            </StackPanel>
+                </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                 
-                <!--
-                Button Layout (almost): 
-                https://dotnetit.wordpress.com/2010/03/25/dockpanel-fill-in-wpf/
-                -->
+                    <!--
+                    Button Layout (almost): 
+                    https://dotnetit.wordpress.com/2010/03/25/dockpanel-fill-in-wpf/
+                    -->
                 
-                <Button x:Name="btnOk" VerticalAlignment="Bottom" Margin="5"  Width="75" Height="23" Click="btnOk_Click" >Ok</Button>
-                <Button x:Name="btnCancel" VerticalAlignment="Bottom" Margin="5" Width="75" Height="23" Click="btnCancel_Click">Cancel</Button>
-            </StackPanel>
+                    <Button x:Name="btnOk" VerticalAlignment="Bottom" Margin="5"  Width="75" Height="23" Click="btnOk_Click" >Ok</Button>
+                    <Button x:Name="btnCancel" VerticalAlignment="Bottom" Margin="5" Width="75" Height="23" Click="btnCancel_Click">Cancel</Button>
+                </StackPanel>
 
 
-			<StackPanel x:Name="StackPanelBooks"    
-              Orientation="Horizontal">
-				<DataGrid x:Name="AUBooksGrid" 
-                                    AutoGenerateColumns="False" HeadersVisibility="Column"
-                                    RenderTransformOrigin="0.502,0.683" DockPanel.Dock="Left">
-					<DataGrid.Columns>
-						<DataGridTextColumn Header="Title ID #" Binding="{Binding title_id, Mode=OneWay}" />
-						<DataGridTextColumn Header="Title" Binding="{Binding title, Mode=OneWay}" />
-						<DataGridTextColumn Header="Type" Binding="{Binding type, Mode=OneWay}" />
-						<DataGridTextColumn Header="Publisher ID" Binding="{Binding publisher.pub_id, Mode=OneWay}" />
-						<DataGridTextColumn Header="Publisher Name" Binding="{Binding publisher.pub_name, Mode=OneWay}" />
-						<DataGridTextColumn Header="Price" Binding="{Binding price, Mode=OneWay}" />
-						<DataGridTextColumn Header="YTD Sales" Binding="{Binding ytd_sales, Mode=OneWay}" />
-						<DataGridTextColumn Header="Publish Date" Binding="{Binding pubdate, Mode=OneWay}" />
-					</DataGrid.Columns>
+			    <StackPanel x:Name="StackPanelBooks"    
+                  Orientation="Horizontal">
+				    <DataGrid x:Name="AUBooksGrid" 
+                                        AutoGenerateColumns="False" HeadersVisibility="Column"
+                                        RenderTransformOrigin="0.502,0.683" DockPanel.Dock="Left">
+					    <DataGrid.Columns>
+						    <DataGridTextColumn Header="Title ID #" Binding="{Binding title_id, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Title" Binding="{Binding title, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Type" Binding="{Binding type, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publisher ID" Binding="{Binding publisher.pub_id, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publisher Name" Binding="{Binding publisher.pub_name, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Price" Binding="{Binding price, Mode=OneWay}" />
+						    <DataGridTextColumn Header="YTD Sales" Binding="{Binding ytd_sales, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publish Date" Binding="{Binding pubdate, Mode=OneWay}" />
+					    </DataGrid.Columns>
 
-				</DataGrid>
-			</StackPanel>
+				    </DataGrid>
+			    </StackPanel>
 
-			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-				<Button x:Name="btnRemove" Height="25" Width="auto" Margin="5" Click="btnRemove_Click">Remove Book From Author</Button>
-			</StackPanel>
+			    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+				    <Button x:Name="btnRemove" Height="25" Width="auto" Margin="5" Click="btnRemove_Click">Remove Book From Author</Button>
+			    </StackPanel>
 
-		</StackPanel>
-    </Grid>
+			    <StackPanel x:Name="StackPanelAllBooks"    
+                  Orientation="Horizontal">
+				    <DataGrid x:Name="AllBooksGrid" 
+                                        AutoGenerateColumns="False" HeadersVisibility="Column"
+                                        RenderTransformOrigin="0.502,0.683" DockPanel.Dock="Left">
+					    <DataGrid.Columns>
+						    <DataGridTextColumn Header="Title ID #" Binding="{Binding title_id, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Title" Binding="{Binding title, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Type" Binding="{Binding type, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publisher ID" Binding="{Binding publisher.pub_id, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publisher Name" Binding="{Binding publisher.pub_name, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Price" Binding="{Binding price, Mode=OneWay}" />
+						    <DataGridTextColumn Header="YTD Sales" Binding="{Binding ytd_sales, Mode=OneWay}" />
+						    <DataGridTextColumn Header="Publish Date" Binding="{Binding pubdate, Mode=OneWay}" />
+					    </DataGrid.Columns>
+
+				    </DataGrid>
+			    </StackPanel>
+			
+			    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+				    <Button x:Name="btnAdd" Height="25" Width="auto" Margin="5" Click="btnAdd_Click">Add Book to Author</Button>
+			    </StackPanel>
+
+		    </StackPanel>
+		</ScrollViewer>
+	</Grid>
 </Window>
